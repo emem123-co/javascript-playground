@@ -7,14 +7,14 @@
 // displayMailingLabel("Emily Morgan", "1234 ABCD Street", "New York", "NY", "12345");
 
 function addNumbers(totalDue, amtPaid) {
-	let remainingBalance = totalDue + amtPaid;
+	var remainingBalance = totalDue + amtPaid;
 	return remainingBalance;
 }
 function displayReceicpt() {
 	let changeDue = addNumbers(400, -600);
 	if (changeDue < 0) {
 		return console.log(`
-               Amt due: ${totalDue}
+               Amt due: ${addNumbers.totalDue}
                Amt paid: ${addNumbers.amtPaid}
                Change due: ${changeDue}`);
 	     }
