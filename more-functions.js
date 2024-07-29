@@ -1,23 +1,32 @@
-function displayMailingLabel(name, address, city, state, zip) {
-     console.log(name /n + address /n + city + state + zip);
+// function displayMailingLabel(name, address, city, state, zip) {
+// 	console.log(name);
+// 	console.log(address);
+// 	console.log(city + ", ", state, zip);
+// }
+
+// displayMailingLabel("Emily Morgan", "1234 ABCD Street", "New York", "NY", "12345");
+
+function addNumbers(totalDue, amtPaid) {
+	let remainingBalance = totalDue + amtPaid;
+	return remainingBalance;
 }
 
-function addNumbers(num1, num2) {
-     let sum = num1 + num2;
-     return console.log(sum);
-
+function displayReceicpt() {
+	let changeDue = addNumbers(400, -600);
+	if (changeDue < 0) {
+		console.log(`Change due: ${changeDue}`);
+	} else console.log(`Remaining balance: ${changeDue}`);
 }
 
-function displayReceicpt(totalDue, amtPaid) {
+displayReceicpt();
 
-     let changeDue = totalDue - amtPaid;
-     if(changeDue < 0) {
-          return console.log("Change due:" + changeDue);
+// function formatMailingLabel(name, address, city, state, zip) {
+// 	return `
+//           ${name}
+//           ${address}
+//           ${city}, ${state}, ${zip}
+//      `;
+// }
 
-     }
-
-     return console.log("Remaining balance:" + changeDue);
-}
-
-
-
+// let mailingLabel = formatMailingLabel("Emily Morgan", "1234 ABCD Street", "New York", "NY", "12345");
+// console.log(mailingLabel);
