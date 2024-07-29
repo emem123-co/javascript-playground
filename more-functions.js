@@ -10,13 +10,21 @@ function addNumbers(totalDue, amtPaid) {
 	let remainingBalance = totalDue + amtPaid;
 	return remainingBalance;
 }
-
 function displayReceicpt() {
 	let changeDue = addNumbers(400, -600);
 	if (changeDue < 0) {
-		console.log(`Change due: ${changeDue}`);
-	} else console.log(`Remaining balance: ${changeDue}`);
-}
+		return console.log(`
+               Amt due: ${totalDue}
+               Amt paid: ${addNumbers.amtPaid}
+               Change due: ${changeDue}`);
+	     }
+     else {
+          return console.log(`
+          Amt due: ${addNumbers.totalDue}
+          Amt paid: ${addNumbers.amtPaid}
+          Remaining balance: ${changeDue}`);
+          }
+    }
 
 displayReceicpt();
 
