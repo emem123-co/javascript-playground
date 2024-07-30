@@ -254,8 +254,6 @@ console.log(popSongTitles);
 
 
 
-
-
 // 7. **Map to create an array of song information strings**:
    let titlesByArtist = songs.map((songs) => `${songs.title} by ${songs.artist}`);
    console.log(titlesByArtist);

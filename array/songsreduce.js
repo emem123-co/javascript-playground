@@ -182,22 +182,35 @@ const songs = [
 	},
 ];
 
-//using forof loop
-let totalDuration = 0;
-for (const song of songs) {
-     totalDuration = totalDuration + song.durationInSeconds;
-}
+// //using forof loop
+// let totalDuration = 0;
+// for (const song of songs) {
+//      totalDuration = totalDuration + song.durationInSeconds;
+// }
 
-console.log(totalDuration);
+// console.log(totalDuration);
 
-//using reduce
-let totalDurationReduce = songs.reduce(function (runningTotal, song) {
-     return runningTotal + song.durationInSeconds}, 0);
+// //using reduce
+// let totalDurationReduce = songs.reduce(function (runningTotal, song) {
+//      return runningTotal + song.durationInSeconds}, 0);
 
-console.log(totalDurationReduce);
+// console.log(totalDurationReduce);
 
-averageSongLengthSeconds = totalDurationReduce / songs.length;
+// averageSongLengthSeconds = totalDurationReduce / songs.length;
 
-averageSongLengthMinutes = (averageSongLengthSeconds / 60);
+// averageSongLengthMinutes = (averageSongLengthSeconds / 60);
 
-console.log(averageSongLengthMinutes);
+// console.log(averageSongLengthMinutes);
+
+
+//6. **Find the longest song**:
+          //- Use the `reduce` method to find the song with the longest duration. What is the title of this song and its duration in seconds?
+     
+          for (const song of songs) {
+          let longestSong = songs.reduce(function (runningTotal1, song) {
+               return runningTotal1 >= songs.durationInSeconds}, 0);
+               if(longestSong === "true") {
+                    return console.log(`${longestSong.title}: ${longestSong.durationInSeconds}`);
+
+               }
+          }
