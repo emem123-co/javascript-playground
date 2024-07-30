@@ -185,10 +185,10 @@ const songs = [
 // Here are some array methods like `find`, `filter`, `map`, and `reduce` on the `songs` array:
 
 // 1. **Find a specific song**:
-//    - Use the `find` method to find the song with the `songID` of 10. What is the title of this song?
+     //- Use the `find` method to find the song with the `songID` of 10. What is the title of this song?
 
 //LONG WAY TO DO IT
-/* function hasID10(song) {
+function hasID10(song) {
      let result = song.songID === 10;
      return result;
 }
@@ -197,72 +197,81 @@ for (const song of songs) { //for of = one piece of the collection, preform {}.
      if(hasID10(song))
           console.log(songs.songID)
      return;   
-} */
+}
 
 // //USING array functions
-// let chosenSong = songs.find((song) => song.songID === 10);
-// console.log(chosenSong.title);
+let chosenSong = songs.find((song) => song.songID === 10);
+console.log(chosenSong.title);
 
-// // 2. **Filter songs by genre**:
-// //    - Use the `filter` method to create a new array of all songs in the "Pop" genre. How many songs are in this genre?
-// // let popSongs = songs.filter((songs) => songs.genre === "Pop");
-// // console.log(popSongs); //there are 8 pop songs
+//2. **Filter songs by genre**:
+          //- Use the `filter` method to create a new array of all songs in the "Pop" genre. How many songs are in this genre?
+let popSongs = songs.filter((songs) => songs.genre === "Pop");
+console.log(popSongs); //there are 8 pop songs
 
-// // 3. **Map to create a new array of titles**:
-// //    - Use the `map` method to create a new array that contains only the titles of all the songs. What are the titles?
-// let popSongs = songs.filter((songs) => songs.genre.toLowerCase() === "pop");
-// // console.log(popSongs); //there are 8 pop songs
-// console.log(popSongs.length); //there are 8 pop songs
+// 3. **Map to create a new array of titles**:
+          //- Use the `map` method to create a new array that contains only the titles of all the songs. What are the titles?
+let popSongs = songs.filter((songs) => songs.genre.toLowerCase() === "pop");
+console.log(popSongs); //there are 8 pop songs
+console.log(popSongs.length); //there are 8 pop songs
 
-// let popSongTitles = popSongs.map((popSongs) => popSongs.title);
-// console.log(popSongTitles);
-// [
-//      'Levitating',
-//      'Stay',
-//      'Drivers License',
-//      'Butter',
-//      'Deja Vu',
-//      'Bad Habits',
-//      'Levitating (feat. DaBaby)',
-//      'Shivers'
-// ]
+let popSongTitles = popSongs.map((popSongs) => popSongs.title);
+console.log(popSongTitles);
+[
+     'Levitating',
+     'Stay',
+     'Drivers License',
+     'Butter',
+     'Deja Vu',
+     'Bad Habits',
+     'Levitating (feat. DaBaby)',
+     'Shivers'
+]
 
-// // 4. **Calculate the total duration**:
-// //    - Use the `reduce` method to calculate the total duration of all songs in seconds. What is the total duration?
-
-// // 5. **Find songs by a specific artist**:
-// //    - Use the `filter` method to find all songs by Olivia Rodrigo. What are the titles of these songs?
-
-//    let oRodSongs = songs.filter((songs) => songs.artist === "Olivia Rodrigo");
-//    console.log(oRodSongs);
-//    let oRodSongTitles = oRodSongs.map((oRodSongs) => oRodSongs.title);
-//    console.log(oRodSongTitles); //Good 4 U, Driver's License, Deja Vu
-
-// // 6. **Find the longest song**:
-// //    - Use the `reduce` method to find the song with the longest duration. What is the title of this song and its duration in seconds?
-
-// // 7. **Map to create an array of song information strings**:
-// //    - Use the `map` method to create a new array of strings where each string is in the format "Title by Artist". What are the strings?
-//    //find titles and artists, put into a string using variables and log that for of. 
+//4. **Calculate the total duration**:
+          //- Use the `reduce` method to calculate the total duration of all songs in seconds. What is the total duration?
 
 
+
+
+
+          
+//5. **Find songs by a specific artist**:
+          - Use the `filter` method to find all songs by Olivia Rodrigo. What are the titles of these songs?
+
+     let oRodSongs = songs.filter((songs) => songs.artist === "Olivia Rodrigo");
+     console.log(oRodSongs);
+     let oRodSongTitles = oRodSongs.map((oRodSongs) => oRodSongs.title);
+     console.log(oRodSongTitles); //Good 4 U, Driver's License, Deja Vu
+
+//6. **Find the longest song**:
+          //- Use the `reduce` method to find the song with the longest duration. What is the title of this song and its duration in seconds?
+
+
+
+
+
+
+// 7. **Map to create an array of song information strings**:
    let titlesByArtist = songs.map((songs) => `${songs.title} by ${songs.artist}`);
    console.log(titlesByArtist);
 
-//    let artists = songs.map((songs) => songs.artist);
-
-
-//    for (const title of titles) {
-//         console.log(`${titles} by ${artists}`);
-
-//    }
-
-
 // 8. **Calculate the average duration**:
-//    - Use the `reduce` method to calculate the average duration of the songs in seconds. What is the average duration?
+          //- Use the `reduce` method to calculate the average duration of the songs in seconds. What is the average duration?
+
+
+
+
 
 // 9. **Filter songs released in a specific year**:
-//    - Use the `filter` method to create a new array of songs released in 2021. How many songs were released in this year?
+          //- Use the `filter` method to create a new array of songs released in 2021. How many songs were released in this year?
+let songs2021 = songs.filter((songs) => songs.year === 2021);
+console.log(songs2021);
+
+let songs2021Titles = songs2021.map((songs2021) => ` ${songs2021.title}`);
+console.log(`The following songs came out in 2021: \n ${songs2021Titles} `);
 
 // 10. **Find the first song of a specific genre**:
-//     - Use the `find` method to find the first song in the "R&B" genre. What is the title of this song?
+          //- Use the `find` method to find the first song in the "R&B" genre. What is the title of this song?
+let firstRB = songs.find((songs) => songs.genre === "R&B");
+let forstRBArt = songs.map((firstRB) => `${firstRB.title} by ${firstRB.artist}`);
+console.log(`The first R&B song in the collection is: ${forstRBArt}`);
