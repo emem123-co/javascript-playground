@@ -230,11 +230,16 @@ console.log(popSongTitles);
 //4. **Calculate the total duration**:
           //- Use the `reduce` method to calculate the total duration of all songs in seconds. What is the total duration?
 
+          let totalDuration = 0;
+          for (const song of songs) {
+               totalDuration =+ song.totalDuration;
+          }
+          console.log(totalDuration);
 
 
 
 
-          
+
 //5. **Find songs by a specific artist**:
           - Use the `filter` method to find all songs by Olivia Rodrigo. What are the titles of these songs?
 
